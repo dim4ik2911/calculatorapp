@@ -1,0 +1,97 @@
+$all-row: 1 / span 4;
+$blue-color: #2196f3;
+$green-color: #2ecc71;
+$red-color: #f44336;
+$blue2-color: #38a2e8;
+$blue3-color: #014c81;
+
+//height 568px
+//width 320px
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%; // 10px = 1rem
+  font-family: "Russo One", sans-serif;
+}
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  height: 100vh;
+}
+.space {
+  grid-column: 1 / span 4;
+  grid-row: 1 / 3;
+}
+.enter {
+  grid-column: 1 / span 4;
+  grid-row: 3 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  background-color: $blue3-color;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.signs,
+.third,
+.second,
+.first {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row: 1fr;
+}
+.signs {
+  grid-column: 1 / span 4;
+  grid-row: 4 / 5;
+  background-color: $blue2-color;
+}
+.third {
+  grid-column: 1 / span 4;
+  grid-row: 5 / 6;
+  background-color: $blue-color;
+
+  #back {
+    background-color: $green-color;
+  }
+  #cancel {
+    background-color: $red-color;
+  }
+}
+.second {
+  grid-column: 1 / span 4;
+  grid-row: 6 / 7;
+  background-color: $blue-color;
+}
+.first {
+  grid-column: 1 / span 4;
+  grid-row: 7 / 8;
+  background-color: $blue-color;
+}
+
+#multiply,
+#divide,
+#plus,
+#reduce,
+#eight,
+#nine,
+#back,
+#cancel,
+#four,
+#five,
+#six,
+#seven,
+#zero,
+#one,
+#two,
+#three {
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+}
